@@ -1,0 +1,57 @@
+system = True
+while system:
+    number1 = input('1st value: ')
+    try:
+        int(number1)
+    except ValueError:
+        try:
+            float(number1)
+        except ValueError:
+            print('Error: This is not a Number. Try again')
+            break
+    number2 = input('2nd value: ')
+    try:
+        int(number2)
+    except ValueError:
+        try:
+            float(number2)
+        except ValueError:
+            print('Error: This is not a Number. Try again')
+            break
+    number3 = input('3rd value: ')
+    try:
+        int(number3)
+    except ValueError:
+        try:
+            float(number3)
+        except ValueError:
+            print('Error: This is not a Number. Try again')
+            break
+    number4 = input('4th value: ')
+    try:
+        int(number4)
+    except ValueError:
+        try:
+            float(number4)
+        except ValueError:
+            print('Error: This is not a Number. Try again')
+            break
+    list = [float(number1), float(number2), float(number3), float(number4)]
+    large_number = list[0]
+    total = 0
+    small_number = list[0]
+    # we assumed that the largest number is the first one on the "list" variable
+    for line_value in list:
+        if line_value > large_number:
+            large_number = line_value
+    print(f'the largest number of the list is:{large_number}')
+
+    for line_value in list:
+        if line_value < small_number:
+            small_number = line_value
+    print(f'the smallest number is: {small_number}')
+
+    for line_value in list:
+        total += line_value
+    print(f'and the sum is: {total}')
+    break
